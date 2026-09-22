@@ -23,8 +23,11 @@
   header { text-align:center; border-bottom:4px double var(--inkoust); padding-bottom:12px; }
   .hlavicka-nad { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--slaba); }
   h1 {
-    margin:10px 0 6px; font-size:clamp(38px,9vw,74px); font-weight:700;
+    margin:10px 0 6px; font-size:clamp(26px,7.2vw,74px); font-weight:700;
     letter-spacing:.04em; line-height:.95; text-transform:uppercase;
+    /* prostrkání přidá mezeru i za poslední písmeno; text-indent ji vyrovná,
+       jinak celý nápis opticky ujíždí doleva/doprava na úzkém displeji */
+    text-indent:.04em;
   }
   .podtitul { font-style:italic; font-size:15px; color:var(--slaba); }
   .tiraz {
@@ -64,7 +67,7 @@
   .starsi li { margin:0 0 6px; break-inside:avoid; }
   .starsi a { color:var(--inkoust); }
   @media (max-width:640px) {
-    .list { padding:26px 20px 36px; }
+    .list { padding:24px 16px 34px; }
     .sazba, ul.kratke, .starsi ul { column-count:1; }
   }
   @media print {
@@ -80,8 +83,8 @@
 <body>
 <div class="list">
   <header>
-    <div class="hlavicka-nad">Týdeník pro Jesenicko</div>
-    <h1>Aktuální&nbsp;Dění</h1>
+    <div class="hlavicka-nad">Občasník pro Jesenicko</div>
+    <h1>Aktuální Dění</h1>
     <div class="podtitul">Zprávy z obcí, polí a lesů pod Rychlebskými horami</div>
     <div class="tiraz">
       <span>Ročník I. — číslo 1</span>
@@ -89,9 +92,9 @@
       <span>Cena: dobré slovo</span>
     </div>
     <nav class="navigace">
-      <a href="../index.html">Aktuální vydání</a> ·
-      <a href="../archiv.html">Archiv</a> ·
-      <a href="2026-09-20.pdf">Stáhnout PDF</a>
+      <a href="index.html">Aktuální vydání</a> ·
+      <a href="archiv.html">Archiv</a> ·
+      <a href="vydani/2026-09-20.pdf">Stáhnout PDF</a>
     </nav>
   </header>
 
@@ -147,7 +150,7 @@
 
 
 
-  <footer>Aktuální Dění · týdeník pro Jesenicko · vychází v neděli</footer>
+  <footer>Aktuální Dění · občasník pro Jesenicko</footer>
 </div>
 </body>
 </html>
